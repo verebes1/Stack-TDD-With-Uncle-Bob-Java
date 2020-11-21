@@ -16,6 +16,11 @@ public class Stack {
         isEmpty = false;
     }
 
+    public int pop() {
+//        return -1;
+        throw new Underflow();
+    }
+
     public class Underflow extends RuntimeException {
 
     }
