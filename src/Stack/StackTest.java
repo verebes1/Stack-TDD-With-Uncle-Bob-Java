@@ -31,4 +31,11 @@ public class StackTest {
             stack.pop();
         });
     }
+
+    @Test()
+    void afterOnePushAndOnePop_willBeEmpty() throws Exception {
+        stack.push(0);
+        stack.pop();
+        assertTrue(stack.isEmpty(), "Stack should be empty after one push and one pop.");
+    }
 }
