@@ -2,6 +2,7 @@ package Stack;
 
 public class Stack {
     private int size = 0;
+    private int element = -1;
 
     public static void main(String[] args) {
 
@@ -13,6 +14,7 @@ public class Stack {
 
 
     public void push(int element) {
+        this.element = element;
         size++;
     }
 
@@ -20,7 +22,7 @@ public class Stack {
         if (isEmpty())
             throw new Underflow();
         --size;
-        return -1;
+        return element;
     }
 
     public class Underflow extends RuntimeException {
