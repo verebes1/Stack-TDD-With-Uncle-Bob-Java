@@ -38,4 +38,5 @@ public class StackTest {
         stack.pop();
         assertTrue(stack.isEmpty(), "Stack should be empty after one push and one pop.");
     }
+
 }
