@@ -1,25 +1,25 @@
 package Stack;
 
 public class Stack {
-    private boolean isEmpty = true;
+    private int size = 0;
 
     public static void main(String[] args) {
 
     }
 
     public boolean isEmpty(){
-        return isEmpty;
+        return size == 0;
     }
 
 
     public void push(int element) {
-        isEmpty = false;
+        size++;
     }
 
     public int pop() {
         if (isEmpty())
             throw new Underflow();
-        isEmpty = true;
+        --size;
         return -1;
     }
 
