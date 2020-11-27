@@ -63,4 +63,15 @@ public class StackTest {
         assertEquals(99, stack.pop());
         assertTrue(stack.isEmpty());
     }
+
+    @Test
+    void afterPushingXYZ_willPopZYX() throws Exception {
+        stack.push(99);
+        stack.push(88);
+        stack.push(77);
+        assertEquals(77, stack.pop());
+        assertEquals(88, stack.pop());
+        assertEquals(99, stack.pop());
+        assertTrue(stack.isEmpty());
+    }
 }
